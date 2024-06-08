@@ -1,4 +1,7 @@
 # Criminal intent
-<img src="https://i.imgur.com/vlM2aQt.png"> <img src="https://i.imgur.com/vlM2aQt.png">
-![Main screen with some data](https://i.imgur.com/vlM2aQt.png) 
-![ss](https://i.imgur.com/UrHDj3t.png)
+<p>
+    <img src="https://i.imgur.com/vlM2aQt.png" width="120" height="120">
+    <img src="https://i.imgur.com/vlM2aQt.png" width="120" height="120">
+    <img src="https://i.imgur.com/vlM2aQt.png" width="120" height="120">
+    <img src="https://i.imgur.com/vlM2aQt.png" width="120" height="120">
+</p>
