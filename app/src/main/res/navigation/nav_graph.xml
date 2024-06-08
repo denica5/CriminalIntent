@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/crimeListFragment">
+
+    <fragment
+        android:id="@+id/crimeListFragment"
+        android:name="com.example.criminalintent.CrimeListFragment"
+        android:label="CrimeListFragment"
+        tools:layout="@layout/fragment_crime_list"
+        >
+        <action
+            android:id="@+id/show_crime_detail"
+            app:destination="@id/crimeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crimeDetailFragment"
+        android:name="com.example.criminalintent.CrimeDetailFragment"
+        android:label="CrimeDetailFragment"
+        tools:layout="@layout/fragment_crime_detail"
+        >
+        <argument
+            android:name="crimeId"
+            app:argType="java.util.UUID" />
+        <action
+            android:id="@+id/select_date"
+            app:destination="@id/dataPickerFragment" />
+        <action
+            android:id="@+id/select_time"
+            app:destination="@id/timePickerFragment" />
+        <action
+            android:id="@+id/select_detail"
+            app:destination="@id/detailDisplayFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dataPickerFragment"
+        android:name="com.example.criminalintent.DatePickerFragment"
+        android:label="DataPickerFragment" >
+        <argument
+            android:name="crimeDate"
+            app:argType="java.util.Date" />
+    </dialog>
+    <dialog
+        android:id="@+id/timePickerFragment"
+        android:name="com.example.criminalintent.TimePickerFragment"
+        android:label="TimePickerFragment" >
+        <argument
+            android:name="crimeDate"
+            app:argType="java.util.Date" />
+    </dialog>
+    <dialog
+        android:id="@+id/detailDisplayFragment"
+        android:name="com.example.criminalintent.DetailDisplayFragment"
+        android:label="DetailDisplayFragment" >
+        <argument
+            android:name="photoFileName"
+            app:argType="string" />
+    </dialog>
+</navigation>
